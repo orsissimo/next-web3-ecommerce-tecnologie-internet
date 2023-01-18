@@ -76,11 +76,14 @@ const Cart = () => {
           toast.success("Success!");
         },
         onError: (err) => {
-          if (err.code === "INSUFFICIENT_FUNDS") {
+          toast.error(
+            "Attention! Insufficient funds to complete the transaction"
+          );
+          /* if (err.code === "INSUFFICIENT_FUNDS") {
             toast.error(
               "Attention! Insufficient funds to complete the transaction"
             );
-          }
+          } */
         },
       });
 
